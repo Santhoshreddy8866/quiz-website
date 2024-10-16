@@ -1,0 +1,234 @@
+ <!doctype html>
+<html lang="en">
+<head>
+    <title>Welcome to Quiz App</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+        .python {
+            margin: 0 300px;
+            padding: 20px;
+        }
+        .python1 {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        label {
+            display: block; 
+            margin: 5px 0;
+            padding: 10px;
+            border: 2px solid;
+            border-radius: 8px;
+            background-color: pink;
+            transition: background-color 0.3s;
+        }
+        label:hover {
+            background-color: #ccff33;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: gray; 
+        }
+        
+    </style>
+</head>
+<body>
+    <h1><center>Core Python Question Quiz</center></h1>
+    <div class="python">
+        <form id="quiz-form" onsubmit="return calculateScore(event)">
+            <div class="python1">
+                <div class="question" onclick="selectRadio('1A')">
+                    <h2>1. Who is the Father Of Python?</h2>
+                </div>
+                <div class="options">
+                    <label><input type="radio" name="1" value="A" id="1A"> A. Berden Echin</label>
+                    <label><input type="radio" name="1" value="B" id="1B"> B. Guido van Rossum</label>
+                    <label><input type="radio" name="1" value="C" id="1C"> C. Charles Babbage</label>
+                    <label><input type="radio" name="1" value="D" id="1D"> D. Santhosh Reddy</label>
+                </div>
+            </div>
+
+            <div class="python1">
+                <div class="question" onclick="selectRadio('2A')">
+                    <h2>2. Use of append in Python?</h2>
+                </div>
+                <div class="options">
+                    <label><input type="radio" name="2" value="A" id="2A"> A. It adds to the end of a sequence.</label>
+                    <label><input type="radio" name="2" value="B" id="2B"> B. It can add a given string.</label>
+                    <label><input type="radio" name="2" value="C" id="2C"> C. It deletes a sequence.</label>
+                    <label><input type="radio" name="2" value="D" id="2D"> D. All of these.</label>
+                </div>
+            </div>
+
+            <div class="python1">
+                <div class="question" onclick="selectRadio('3A')">
+                    <h2>3. What is the symbol of the power operator?</h2>
+                </div>
+                <div class="options">
+                    <label><input type="radio" name="3" value="A" id="3A"> A. //</label>
+                    <label><input type="radio" name="3" value="B" id="3B"> B. &&</label>
+                    <label><input type="radio" name="3" value="C" id="3C"> C. **</label>
+                    <label><input type="radio" name="3" value="D" id="3D"> D. ##</label>
+                </div>
+            </div>
+
+            <div class="python1">
+                <div class="question" onclick="selectRadio('4A')">
+                    <h2>4. What is the keyword used to define a function in Python?</h2>
+                </div>
+                <div class="options">
+                    <label><input type="radio" name="4" value="A" id="4A"> A. def</label>
+                    <label><input type="radio" name="4" value="B" id="4B"> B. function</label>
+                    <label><input type="radio" name="4" value="C" id="4C"> C. define</label>
+                    <label><input type="radio" name="4" value="D" id="4D"> D. func</label>
+                </div>
+            </div>
+
+            <div class="python1">
+                <div class="question" onclick="selectRadio('5A')">
+                    <h2>5. Which of the following is used to create a list in Python?</h2>
+                </div>
+                <div class="options">
+                    <label><input type="radio" name="5" value="A" id="5A"> A. {}</label>
+                    <label><input type="radio" name="5" value="B" id="5B"> B. []</label>
+                    <label><input type="radio" name="5" value="C" id="5C"> C. ()</label>
+                    <label><input type="radio" name="5" value="D" id="5D"> D. All of these.</label>
+                </div>
+            </div>
+
+            <div class="python1">
+                <div class="question" onclick="selectRadio('6A')">
+                    <h2>6. What is the output of the following code? print(type([]) is list)</h2>
+                </div>
+                <div class="options">
+                    <label><input type="radio" name="6" value="A" id="6A"> A. True</label>
+                    <label><input type="radio" name="6" value="B" id="6B"> B. False</label>
+                    <label><input type="radio" name="6" value="C" id="6C"> C. None</label>
+                    <label><input type="radio" name="6" value="D" id="6D"> D. Error</label>
+                </div>
+            </div>
+
+            <div class="python1">
+                <div class="question" onclick="selectRadio('7A')">
+                    <h2>7. Which of the following is a mutable data type in Python?</h2>
+                </div>
+                <div class="options">
+                    <label><input type="radio" name="7" value="A" id="7A"> A. Tuple</label>
+                    <label><input type="radio" name="7" value="B" id="7B"> B. String</label>
+                    <label><input type="radio" name="7" value="C" id="7C"> C. List</label>
+                    <label><input type="radio" name="7" value="D" id="7D"> D. Integer</label>
+                </div>
+            </div>
+
+            <div class="python1">
+                <div class="question" onclick="selectRadio('8A')">
+                    <h2>8. What is the method to add an element at the end of a list in Python?</h2>
+                </div>
+                <div class="options">
+                    <label><input type="radio" name="8" value="A" id="8A"> A. add()</label>
+                    <label><input type="radio" name="8" value="B" id="8B"> B. insert()</label>
+                    <label><input type="radio" name="8" value="C" id="8C"> C. append()</label>
+                    <label><input type="radio" name="8" value="D" id="8D"> D. extend()</label>
+                </div>
+            </div>
+
+            <div class="python1">
+                <div class="question" onclick="selectRadio('9A')">
+                    <h2>9. How do you create a dictionary in Python?</h2>
+                </div>
+                <div class="options">
+                    <label><input type="radio" name="9" value="A" id="9A"> A. dict = []</label>
+                    <label><input type="radio" name="9" value="B" id="9B"> B. dict = ()</label>
+                    <label><input type="radio" name="9" value="C" id="9C"> C. dict = {key: value}</label>
+                    <label><input type="radio" name="9" value="D" id="9D"> D. dict = {}</label>
+                </div>
+            </div>
+
+            <div class="python1">
+                <div class="question" onclick="selectRadio('10A')">
+                    <h2>10. What is the output of the following code? print("Hello" + " World")</h2>
+                </div>
+                <div class="options">
+                    <label><input type="radio" name="10" value="A" id="10A"> A. Hello World</label>
+                    <label><input type="radio" name="10" value="B" id="10B"> B. HelloWorld</label>
+                    <label><input type="radio" name="10" value="C" id="10C"> C. Error</label>
+                    <label><input type="radio" name="10" value="D" id="10D"> D. Hello + World</label>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button type="submit">Submit Answers</button>
+            </div>
+        </form>
+
+        <div id="score" style="text-align: center; margin-top: 20px; font-size: 20px;"></div>
+    </div>
+
+    <script>
+        function selectRadio(radioId) {
+            document.getElementById(radioId).checked = true; 
+        }
+
+        function calculateScore(event) {
+            event.preventDefault(); 
+
+            const correctAnswers = {
+                1: 'B',
+                2: 'A',
+                3: 'C',
+                4: 'A',
+                5: 'B',
+                6: 'A',
+                7: 'C',
+                8: 'C',
+                9: 'D',
+                10: 'A'
+            };
+
+            let score = 0;
+            const totalQuestions = Object.keys(correctAnswers).length;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selectedValue = document.querySelector(`input[name="${i}"]:checked`);
+                const inputs = document.querySelectorAll(`input[name="${i}"]`);
+
+                if (selectedValue) {
+                    if (selectedValue.value === correctAnswers[i]) {
+                        score++;
+                        selectedValue.classList.add('correct'); // Highlight correct answer
+                    } else {
+                        selectedValue.classList.add('incorrect'); // Highlight incorrect answer
+                        // Highlight the correct answer
+                        inputs.forEach(input => {
+                            if (input.value === correctAnswers[i]) {
+                                input.classList.add('correct');
+                            }
+                        });
+                    }
+                }
+            }
+
+            // Display score
+            document.getElementById('score').innerHTML = `Your score is: ${score} out of ${totalQuestions}`;
+        }
+    </script>
+</body>
+</html>
